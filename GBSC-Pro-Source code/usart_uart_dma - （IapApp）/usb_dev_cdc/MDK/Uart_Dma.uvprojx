@@ -873,7 +873,7 @@
               <MiscControls></MiscControls>
               <Define>HC32F460,USE_DDL_DRIVER,</Define>
               <Undefine></Undefine>
-              <IncludePath>..\source;../../../../../../drivers/cmsis/Device/HDSC/hc32f4xx/Include;../../../../../../drivers/cmsis/Include;../../../../../../drivers/hc32_ll_driver/inc;../../../../../../drivers/bsp/ev_hc32f460_lqfp100_v2;../../../../../../midwares/hc32/usb;../../../../../../midwares/hc32/usb/usb_device_lib/device_core;../../../../../../midwares/hc32/usb/usb_device_lib/device_class/single_cdc;</IncludePath>
+              <IncludePath>..\source;../../../../../../drivers/cmsis/Device/HDSC/hc32f4xx/Include;../../../../../../drivers/cmsis/Include;../../../../../../drivers/hc32_ll_driver/inc;../../../../../../drivers/bsp/ev_hc32f460_lqfp100_v2;../../../../../../midwares/hc32/usb;../../../../../../midwares/hc32/usb/usb_device_lib/device_core;../../../../../../midwares/hc32/usb/usb_device_lib/device_class/single_cdc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

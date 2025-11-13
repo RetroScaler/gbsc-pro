@@ -840,6 +840,10 @@ Section Cross References
     videoprocess.o(i.SoftwareReset_ADV7280A) refers to i2c.o(i.I2C_Master_Transmit) for I2C_Master_Transmit
     videoprocess.o(i.SoftwareReset_ADV7280A) refers to hc32_ll_utility.o(i.DDL_DelayMS) for DDL_DelayMS
     videoprocess.o(i.Video_Sw) refers to videoprocess.o(i.video_init) for video_init
+    videoprocess.o(i.configure_video_encoder) refers to i2c.o(i.Chip_Receive) for Chip_Receive
+    videoprocess.o(i.configure_video_encoder) refers to i2c.o(i.ADV_7280_Send_Buff) for ADV_7280_Send_Buff
+    videoprocess.o(i.configure_video_encoder) refers to printf8.o(i.__0printf$8) for __2printf
+    videoprocess.o(i.configure_video_encoder) refers to videoprocess.o(.data) for I2C_COMMANDS_525p_CONFIG
     videoprocess.o(i.detect_loop) refers to i2c.o(i.I2C_Master_Transmit) for I2C_Master_Transmit
     videoprocess.o(i.detect_loop) refers to hc32_ll_utility.o(i.DDL_DelayMS) for DDL_DelayMS
     videoprocess.o(i.detect_loop) refers to i2c.o(i.Chip_Receive) for Chip_Receive
@@ -876,6 +880,7 @@ Section Cross References
     videoprocess.o(i.video_init) refers to videoprocess.o(i.set_input) for set_input
     videoprocess.o(i.video_init) refers to printf8.o(i.__0printf$8) for __2printf
     videoprocess.o(i.video_init) refers to i2c.o(i.I2C_Master_Transmit) for I2C_Master_Transmit
+    videoprocess.o(i.video_init) refers to videoprocess.o(i.configure_video_encoder) for configure_video_encoder
     videoprocess.o(i.video_init) refers to videoprocess.o(i.set_bcsh) for set_bcsh
     videoprocess.o(i.video_init) refers to videoprocess.o(i.set_double_line) for set_double_line
     videoprocess.o(i.video_init) refers to videoprocess.o(i.set_smooth) for set_smooth
@@ -1709,49 +1714,49 @@ Image Symbol Table
     ../clib/../cmprslib/zerorunl2.c          0x00000000   Number         0  __dczerorl2.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/putc.c            0x00000000   Number         0  putc.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ../clib/microlib/string/strncpy.c        0x00000000   Number         0  strncpy.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
     ../fplib/microlib/d2f.c                  0x00000000   Number         0  d2f.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
-    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
-    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltul.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltul.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
     ..\..\drivers\bsp\ev_hc32f460_lqfp100_v2\ev_hc32f460_lqfp100_v2.c 0x00000000   Number         0  ev_hc32f460_lqfp100_v2.o ABSOLUTE
     ..\..\drivers\cmsis\Device\HDSC\hc32f4xx\Source\system_hc32f460.c 0x00000000   Number         0  system_hc32f460.o ABSOLUTE
@@ -2129,42 +2134,44 @@ Image Symbol Table
     i.cm_backtrace_call_stack                0x00016fa0   Section        0  cm_backtrace.o(i.cm_backtrace_call_stack)
     i.cm_backtrace_fault                     0x0001708c   Section        0  cm_backtrace.o(i.cm_backtrace_fault)
     i.cm_backtrace_firmware_info             0x00017318   Section        0  cm_backtrace.o(i.cm_backtrace_firmware_info)
-    i.detect_loop                            0x00017344   Section        0  videoprocess.o(i.detect_loop)
-    i.detect_video_format                    0x00017474   Section        0  videoprocess.o(i.detect_video_format)
-    i.disassembly_ins_is_bl_blx              0x000175c8   Section        0  cm_backtrace.o(i.disassembly_ins_is_bl_blx)
-    disassembly_ins_is_bl_blx                0x000175c9   Thumb Code    48  cm_backtrace.o(i.disassembly_ins_is_bl_blx)
-    i.dump_stack                             0x000175f8   Section        0  cm_backtrace.o(i.dump_stack)
-    dump_stack                               0x000175f9   Thumb Code   136  cm_backtrace.o(i.dump_stack)
-    i.fault_diagnosis                        0x000176d4   Section        0  cm_backtrace.o(i.fault_diagnosis)
-    fault_diagnosis                          0x000176d5   Thumb Code   764  cm_backtrace.o(i.fault_diagnosis)
-    i.fputc                                  0x000179dc   Section        0  hc32_ll_utility.o(i.fputc)
-    i.get_mode                               0x000179f4   Section        0  uart_dma.o(i.get_mode)
-    get_mode                                 0x000179f5   Thumb Code   670  uart_dma.o(i.get_mode)
-    i.i2c_init                               0x00017d28   Section        0  i2c.o(i.i2c_init)
-    i.main                                   0x00017d90   Section        0  main.o(i.main)
-    i.mem_settings                           0x00017eb8   Section        0  flash.o(i.mem_settings)
-    i.print_call_stack                       0x00017ff0   Section        0  cm_backtrace.o(i.print_call_stack)
-    print_call_stack                         0x00017ff1   Thumb Code   118  cm_backtrace.o(i.print_call_stack)
-    i.set_ace                                0x00018088   Section        0  videoprocess.o(i.set_ace)
-    i.set_bcsh                               0x000180d0   Section        0  videoprocess.o(i.set_bcsh)
-    i.set_double_line                        0x00018160   Section        0  videoprocess.o(i.set_double_line)
-    i.set_input                              0x000181a8   Section        0  videoprocess.o(i.set_input)
-    i.set_smooth                             0x000181f8   Section        0  videoprocess.o(i.set_smooth)
-    i.signal_turn                            0x00018248   Section        0  uart_dma.o(i.signal_turn)
-    i.statck_del_fpu_regs                    0x00018968   Section        0  cm_backtrace.o(i.statck_del_fpu_regs)
-    statck_del_fpu_regs                      0x00018969   Thumb Code    30  cm_backtrace.o(i.statck_del_fpu_regs)
-    i.uart_dma_init                          0x0001898c   Section        0  uart_dma.o(i.uart_dma_init)
-    i.vd_Button_Init                         0x00018aa0   Section        0  main.o(i.vd_Button_Init)
-    vd_Button_Init                           0x00018aa1   Thumb Code   290  main.o(i.vd_Button_Init)
-    i.video_Deinit                           0x00018bcc   Section        0  videoprocess.o(i.video_Deinit)
-    i.video_init                             0x00018c04   Section        0  videoprocess.o(i.video_init)
-    .constdata                               0x00018d24   Section       16  hc32_ll_usart.o(.constdata)
-    .constdata                               0x00018d34   Section       15  videoprocess.o(.constdata)
-    .constdata                               0x00018d44   Section      224  cm_backtrace.o(.constdata)
-    print_info                               0x00018d44   Data         152  cm_backtrace.o(.constdata)
-    __FUNCTION__                             0x00018ddc   Data          20  cm_backtrace.o(.constdata)
-    __FUNCTION__                             0x00018df0   Data          19  cm_backtrace.o(.constdata)
-    .conststring                             0x00018e24   Section     1638  cm_backtrace.o(.conststring)
+    i.configure_video_encoder                0x00017344   Section        0  videoprocess.o(i.configure_video_encoder)
+    configure_video_encoder                  0x00017345   Thumb Code   102  videoprocess.o(i.configure_video_encoder)
+    i.detect_loop                            0x000173e8   Section        0  videoprocess.o(i.detect_loop)
+    i.detect_video_format                    0x00017518   Section        0  videoprocess.o(i.detect_video_format)
+    i.disassembly_ins_is_bl_blx              0x0001766c   Section        0  cm_backtrace.o(i.disassembly_ins_is_bl_blx)
+    disassembly_ins_is_bl_blx                0x0001766d   Thumb Code    48  cm_backtrace.o(i.disassembly_ins_is_bl_blx)
+    i.dump_stack                             0x0001769c   Section        0  cm_backtrace.o(i.dump_stack)
+    dump_stack                               0x0001769d   Thumb Code   136  cm_backtrace.o(i.dump_stack)
+    i.fault_diagnosis                        0x00017778   Section        0  cm_backtrace.o(i.fault_diagnosis)
+    fault_diagnosis                          0x00017779   Thumb Code   764  cm_backtrace.o(i.fault_diagnosis)
+    i.fputc                                  0x00017a80   Section        0  hc32_ll_utility.o(i.fputc)
+    i.get_mode                               0x00017a98   Section        0  uart_dma.o(i.get_mode)
+    get_mode                                 0x00017a99   Thumb Code   670  uart_dma.o(i.get_mode)
+    i.i2c_init                               0x00017dcc   Section        0  i2c.o(i.i2c_init)
+    i.main                                   0x00017e34   Section        0  main.o(i.main)
+    i.mem_settings                           0x00017f64   Section        0  flash.o(i.mem_settings)
+    i.print_call_stack                       0x0001809c   Section        0  cm_backtrace.o(i.print_call_stack)
+    print_call_stack                         0x0001809d   Thumb Code   118  cm_backtrace.o(i.print_call_stack)
+    i.set_ace                                0x00018134   Section        0  videoprocess.o(i.set_ace)
+    i.set_bcsh                               0x0001817c   Section        0  videoprocess.o(i.set_bcsh)
+    i.set_double_line                        0x0001820c   Section        0  videoprocess.o(i.set_double_line)
+    i.set_input                              0x00018254   Section        0  videoprocess.o(i.set_input)
+    i.set_smooth                             0x000182a4   Section        0  videoprocess.o(i.set_smooth)
+    i.signal_turn                            0x000182f4   Section        0  uart_dma.o(i.signal_turn)
+    i.statck_del_fpu_regs                    0x00018a14   Section        0  cm_backtrace.o(i.statck_del_fpu_regs)
+    statck_del_fpu_regs                      0x00018a15   Thumb Code    30  cm_backtrace.o(i.statck_del_fpu_regs)
+    i.uart_dma_init                          0x00018a38   Section        0  uart_dma.o(i.uart_dma_init)
+    i.vd_Button_Init                         0x00018b4c   Section        0  main.o(i.vd_Button_Init)
+    vd_Button_Init                           0x00018b4d   Thumb Code   290  main.o(i.vd_Button_Init)
+    i.video_Deinit                           0x00018c78   Section        0  videoprocess.o(i.video_Deinit)
+    i.video_init                             0x00018cb0   Section        0  videoprocess.o(i.video_init)
+    .constdata                               0x00018dd4   Section       16  hc32_ll_usart.o(.constdata)
+    .constdata                               0x00018de4   Section        6  videoprocess.o(.constdata)
+    .constdata                               0x00018dec   Section      224  cm_backtrace.o(.constdata)
+    print_info                               0x00018dec   Data         152  cm_backtrace.o(.constdata)
+    __FUNCTION__                             0x00018e84   Data          20  cm_backtrace.o(.constdata)
+    __FUNCTION__                             0x00018e98   Data          19  cm_backtrace.o(.constdata)
+    .conststring                             0x00018ecc   Section     1638  cm_backtrace.o(.conststring)
     .data                                    0x1fff8000   Section       16  hc32_ll_utility.o(.data)
     m_u32TickStep                            0x1fff8000   Data           4  hc32_ll_utility.o(.data)
     m_u32TickCount                           0x1fff8004   Data           4  hc32_ll_utility.o(.data)
@@ -2189,38 +2196,38 @@ Image Symbol Table
     .data                                    0x1fff803c   Section        4  uart_dma.o(.data)
     m_enRxFrameEnd                           0x1fff803c   Data           1  uart_dma.o(.data)
     m_u16RxLen                               0x1fff803e   Data           2  uart_dma.o(.data)
-    .data                                    0x1fff8040   Section      289  videoprocess.o(.data)
+    .data                                    0x1fff8040   Section      286  videoprocess.o(.data)
     m_enRxFrameEnd                           0x1fff8040   Data           1  videoprocess.o(.data)
     m_u16RxLen                               0x1fff8042   Data           2  videoprocess.o(.data)
     status                                   0x1fff8045   Data           1  videoprocess.o(.data)
-    key_state                                0x1fff815d   Data           1  videoprocess.o(.data)
-    key_state_last                           0x1fff815e   Data           1  videoprocess.o(.data)
-    key_line_state                           0x1fff815f   Data           1  videoprocess.o(.data)
-    key_state_line_last                      0x1fff8160   Data           1  videoprocess.o(.data)
-    .data                                    0x1fff8164   Section        8  system_hc32f460.o(.data)
-    .data                                    0x1fff816c   Section       21  cm_backtrace.o(.data)
-    main_stack_start_addr                    0x1fff816c   Data           4  cm_backtrace.o(.data)
-    main_stack_size                          0x1fff8170   Data           4  cm_backtrace.o(.data)
-    code_start_addr                          0x1fff8174   Data           4  cm_backtrace.o(.data)
-    code_size                                0x1fff8178   Data           4  cm_backtrace.o(.data)
-    init_ok                                  0x1fff817c   Data           1  cm_backtrace.o(.data)
-    on_fault                                 0x1fff817d   Data           1  cm_backtrace.o(.data)
-    stack_is_overflow                        0x1fff817e   Data           1  cm_backtrace.o(.data)
-    statck_has_fpu_regs                      0x1fff817f   Data           1  cm_backtrace.o(.data)
-    on_thread_before_fault                   0x1fff8180   Data           1  cm_backtrace.o(.data)
-    .data                                    0x1fff8184   Section        4  stdout.o(.data)
-    .bss                                     0x1fff8188   Section      512  hc32_ll_interrupts.o(.bss)
-    m_apfnIrqHandler                         0x1fff8188   Data         512  hc32_ll_interrupts.o(.bss)
-    .bss                                     0x1fff8388   Section      256  flash.o(.bss)
-    .bss                                     0x1fff8488   Section      532  uart_dma.o(.bss)
-    stcLlpDesc                               0x1fff867c   Data          32  uart_dma.o(.bss)
-    .bss                                     0x1fff869c   Section      456  cm_backtrace.o(.bss)
-    fw_name                                  0x1fff869c   Data          33  cm_backtrace.o(.bss)
-    hw_ver                                   0x1fff86bd   Data          33  cm_backtrace.o(.bss)
-    sw_ver                                   0x1fff86de   Data          33  cm_backtrace.o(.bss)
-    call_stack_info                          0x1fff86ff   Data         288  cm_backtrace.o(.bss)
-    regs                                     0x1fff8820   Data          68  cm_backtrace.o(.bss)
-    STACK                                    0x1fff8868   Section     3072  startup_hc32f460.o(STACK)
+    key_state                                0x1fff815a   Data           1  videoprocess.o(.data)
+    key_state_last                           0x1fff815b   Data           1  videoprocess.o(.data)
+    key_line_state                           0x1fff815c   Data           1  videoprocess.o(.data)
+    key_state_line_last                      0x1fff815d   Data           1  videoprocess.o(.data)
+    .data                                    0x1fff8160   Section        8  system_hc32f460.o(.data)
+    .data                                    0x1fff8168   Section       21  cm_backtrace.o(.data)
+    main_stack_start_addr                    0x1fff8168   Data           4  cm_backtrace.o(.data)
+    main_stack_size                          0x1fff816c   Data           4  cm_backtrace.o(.data)
+    code_start_addr                          0x1fff8170   Data           4  cm_backtrace.o(.data)
+    code_size                                0x1fff8174   Data           4  cm_backtrace.o(.data)
+    init_ok                                  0x1fff8178   Data           1  cm_backtrace.o(.data)
+    on_fault                                 0x1fff8179   Data           1  cm_backtrace.o(.data)
+    stack_is_overflow                        0x1fff817a   Data           1  cm_backtrace.o(.data)
+    statck_has_fpu_regs                      0x1fff817b   Data           1  cm_backtrace.o(.data)
+    on_thread_before_fault                   0x1fff817c   Data           1  cm_backtrace.o(.data)
+    .data                                    0x1fff8180   Section        4  stdout.o(.data)
+    .bss                                     0x1fff8184   Section      512  hc32_ll_interrupts.o(.bss)
+    m_apfnIrqHandler                         0x1fff8184   Data         512  hc32_ll_interrupts.o(.bss)
+    .bss                                     0x1fff8384   Section      256  flash.o(.bss)
+    .bss                                     0x1fff8484   Section      532  uart_dma.o(.bss)
+    stcLlpDesc                               0x1fff8678   Data          32  uart_dma.o(.bss)
+    .bss                                     0x1fff8698   Section      456  cm_backtrace.o(.bss)
+    fw_name                                  0x1fff8698   Data          33  cm_backtrace.o(.bss)
+    hw_ver                                   0x1fff86b9   Data          33  cm_backtrace.o(.bss)
+    sw_ver                                   0x1fff86da   Data          33  cm_backtrace.o(.bss)
+    call_stack_info                          0x1fff86fb   Data         288  cm_backtrace.o(.bss)
+    regs                                     0x1fff881c   Data          68  cm_backtrace.o(.bss)
+    STACK                                    0x1fff8860   Section     3072  startup_hc32f460.o(STACK)
 
     Global Symbols
 
@@ -2603,25 +2610,25 @@ Image Symbol Table
     cm_backtrace_call_stack                  0x00016fa1   Thumb Code   208  cm_backtrace.o(i.cm_backtrace_call_stack)
     cm_backtrace_fault                       0x0001708d   Thumb Code   436  cm_backtrace.o(i.cm_backtrace_fault)
     cm_backtrace_firmware_info               0x00017319   Thumb Code    24  cm_backtrace.o(i.cm_backtrace_firmware_info)
-    detect_loop                              0x00017345   Thumb Code   234  videoprocess.o(i.detect_loop)
-    detect_video_format                      0x00017475   Thumb Code   208  videoprocess.o(i.detect_video_format)
-    fputc                                    0x000179dd   Thumb Code    24  hc32_ll_utility.o(i.fputc)
-    i2c_init                                 0x00017d29   Thumb Code    74  i2c.o(i.i2c_init)
-    $Super$$main                             0x00017d91   Thumb Code   246  main.o(i.main)
-    mem_settings                             0x00017eb9   Thumb Code   164  flash.o(i.mem_settings)
-    set_ace                                  0x00018089   Thumb Code    46  videoprocess.o(i.set_ace)
-    set_bcsh                                 0x000180d1   Thumb Code    66  videoprocess.o(i.set_bcsh)
-    set_double_line                          0x00018161   Thumb Code    46  videoprocess.o(i.set_double_line)
-    set_input                                0x000181a9   Thumb Code    46  videoprocess.o(i.set_input)
-    set_smooth                               0x000181f9   Thumb Code    46  videoprocess.o(i.set_smooth)
-    signal_turn                              0x00018249   Thumb Code  1712  uart_dma.o(i.signal_turn)
-    uart_dma_init                            0x0001898d   Thumb Code   258  uart_dma.o(i.uart_dma_init)
-    video_Deinit                             0x00018bcd   Thumb Code    40  videoprocess.o(i.video_Deinit)
-    video_init                               0x00018c05   Thumb Code   222  videoprocess.o(i.video_init)
-    I2C_COMMANDS_I2P_OFF_p                   0x00018d34   Data          15  videoprocess.o(.constdata)
-    Region$$Table$$Base                      0x0001948c   Number         0  anon$$obj.o(Region$$Table)
-    Image$$ER_IROM1$$Limit                   0x000194ac   Number         0  anon$$obj.o ABSOLUTE
-    Region$$Table$$Limit                     0x000194ac   Number         0  anon$$obj.o(Region$$Table)
+    detect_loop                              0x000173e9   Thumb Code   234  videoprocess.o(i.detect_loop)
+    detect_video_format                      0x00017519   Thumb Code   208  videoprocess.o(i.detect_video_format)
+    fputc                                    0x00017a81   Thumb Code    24  hc32_ll_utility.o(i.fputc)
+    i2c_init                                 0x00017dcd   Thumb Code    74  i2c.o(i.i2c_init)
+    $Super$$main                             0x00017e35   Thumb Code   254  main.o(i.main)
+    mem_settings                             0x00017f65   Thumb Code   164  flash.o(i.mem_settings)
+    set_ace                                  0x00018135   Thumb Code    46  videoprocess.o(i.set_ace)
+    set_bcsh                                 0x0001817d   Thumb Code    66  videoprocess.o(i.set_bcsh)
+    set_double_line                          0x0001820d   Thumb Code    46  videoprocess.o(i.set_double_line)
+    set_input                                0x00018255   Thumb Code    46  videoprocess.o(i.set_input)
+    set_smooth                               0x000182a5   Thumb Code    46  videoprocess.o(i.set_smooth)
+    signal_turn                              0x000182f5   Thumb Code  1712  uart_dma.o(i.signal_turn)
+    uart_dma_init                            0x00018a39   Thumb Code   258  uart_dma.o(i.uart_dma_init)
+    video_Deinit                             0x00018c79   Thumb Code    40  videoprocess.o(i.video_Deinit)
+    video_init                               0x00018cb1   Thumb Code   226  videoprocess.o(i.video_init)
+    I2C_COMMANDS_I2P_OFF_p                   0x00018de4   Data           6  videoprocess.o(.constdata)
+    Region$$Table$$Base                      0x00019534   Number         0  anon$$obj.o(Region$$Table)
+    Image$$ER_IROM1$$Limit                   0x00019554   Number         0  anon$$obj.o ABSOLUTE
+    Region$$Table$$Limit                     0x00019554   Number         0  anon$$obj.o(Region$$Table)
     g_u16_sys_timer                          0x1fff8018   Data           2  ev_hc32f460_lqfp100_v2.o(.data)
     g_u16_key_timer                          0x1fff801a   Data           2  ev_hc32f460_lqfp100_v2.o(.data)
     g_u16_mis_timer                          0x1fff801c   Data           2  ev_hc32f460_lqfp100_v2.o(.data)
@@ -2650,24 +2657,26 @@ Image Symbol Table
     asw_04                                   0x1fff8055   Data           1  videoprocess.o(.data)
     AVsw                                     0x1fff8056   Data           1  videoprocess.o(.data)
     Input_signal                             0x1fff8057   Data           1  videoprocess.o(.data)
-    I2C_COMMANDS_I2P_ON                      0x1fff8058   Data          15  videoprocess.o(.data)
-    I2C_COMMANDS_I2P_OFF_576i                0x1fff8067   Data          42  videoprocess.o(.data)
-    I2C_COMMANDS_SMOOTH_OFF                  0x1fff8091   Data           9  videoprocess.o(.data)
-    I2C_COMMANDS_SMOOTH_ON                   0x1fff809a   Data           9  videoprocess.o(.data)
-    I2C_COMMANDS_BCSH                        0x1fff80a3   Data          15  videoprocess.o(.data)
-    I2C_COMMANDS_YC_INPUT                    0x1fff80b2   Data          15  videoprocess.o(.data)
-    I2C_COMMANDS_CVBS_INPUT                  0x1fff80c1   Data          15  videoprocess.o(.data)
-    I2C_AUTO_COMMANDS                        0x1fff80d0   Data         123  videoprocess.o(.data)
-    Ace_Code_ON                              0x1fff814b   Data           9  videoprocess.o(.data)
-    Ace_Code_OFF                             0x1fff8154   Data           9  videoprocess.o(.data)
-    SystemCoreClock                          0x1fff8164   Data           4  system_hc32f460.o(.data)
-    HRC_VALUE                                0x1fff8168   Data           4  system_hc32f460.o(.data)
-    __stdout                                 0x1fff8184   Data           4  stdout.o(.data)
-    u8_buf                                   0x1fff8388   Data         256  flash.o(.bss)
-    dma_au8RxBuf                             0x1fff8488   Data         500  uart_dma.o(.bss)
-    STACK$$Base                              0x1fff8868   Number         0  startup_hc32f460.o(STACK)
-    STACK$$Limit                             0x1fff9468   Number         0  startup_hc32f460.o(STACK)
-    __initial_sp                             0x1fff9468   Data           0  startup_hc32f460.o(STACK)
+    I2C_COMMANDS_I2P_ON                      0x1fff8058   Data           6  videoprocess.o(.data)
+    I2C_COMMANDS_I2P_OFF_576i                0x1fff805e   Data          45  videoprocess.o(.data)
+    I2C_COMMANDS_SMOOTH_OFF                  0x1fff808b   Data           9  videoprocess.o(.data)
+    I2C_COMMANDS_SMOOTH_ON                   0x1fff8094   Data           9  videoprocess.o(.data)
+    I2C_COMMANDS_BCSH                        0x1fff809d   Data          15  videoprocess.o(.data)
+    I2C_COMMANDS_YC_INPUT                    0x1fff80ac   Data          15  videoprocess.o(.data)
+    I2C_COMMANDS_CVBS_INPUT                  0x1fff80bb   Data          15  videoprocess.o(.data)
+    I2C_AUTO_COMMANDS                        0x1fff80ca   Data         114  videoprocess.o(.data)
+    Ace_Code_ON                              0x1fff813c   Data           9  videoprocess.o(.data)
+    Ace_Code_OFF                             0x1fff8145   Data           9  videoprocess.o(.data)
+    I2C_COMMANDS_525p_CONFIG                 0x1fff814e   Data           6  videoprocess.o(.data)
+    I2C_COMMANDS_625p_CONFIG                 0x1fff8154   Data           6  videoprocess.o(.data)
+    SystemCoreClock                          0x1fff8160   Data           4  system_hc32f460.o(.data)
+    HRC_VALUE                                0x1fff8164   Data           4  system_hc32f460.o(.data)
+    __stdout                                 0x1fff8180   Data           4  stdout.o(.data)
+    u8_buf                                   0x1fff8384   Data         256  flash.o(.bss)
+    dma_au8RxBuf                             0x1fff8484   Data         500  uart_dma.o(.bss)
+    STACK$$Base                              0x1fff8860   Number         0  startup_hc32f460.o(STACK)
+    STACK$$Limit                             0x1fff9460   Number         0  startup_hc32f460.o(STACK)
+    __initial_sp                             0x1fff9460   Data           0  startup_hc32f460.o(STACK)
 
 
 
@@ -2677,45 +2686,45 @@ Memory Map of the image
 
   Image Entry point : 0x00010281
 
-  Load Region LR_IROM1 (Base: 0x00010000, Size: 0x00009634, Max: 0x00060000, ABSOLUTE, COMPRESSED[0x00009580])
+  Load Region LR_IROM1 (Base: 0x00010000, Size: 0x000096d8, Max: 0x00060000, ABSOLUTE, COMPRESSED[0x0000962c])
 
-    Execution Region ER_IROM1 (Exec base: 0x00010000, Load base: 0x00010000, Size: 0x000094ac, Max: 0x00060000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00010000, Load base: 0x00010000, Size: 0x00009554, Max: 0x00060000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00010000   0x00010000   0x00000280   Data   RO         3984    RESET               startup_hc32f460.o
-    0x00010280   0x00010280   0x00000000   Code   RO         4089  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x00010280   0x00010280   0x00000004   Code   RO         4374    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x00010284   0x00010284   0x00000004   Code   RO         4377    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00010288   0x00010288   0x00000000   Code   RO         4379    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00010288   0x00010288   0x00000000   Code   RO         4381    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00010288   0x00010288   0x00000008   Code   RO         4382    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x00010290   0x00010290   0x00000000   Code   RO         4384    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x00010290   0x00010290   0x00000000   Code   RO         4386    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x00010290   0x00010290   0x00000004   Code   RO         4375    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x00010294   0x00010294   0x00000058   Code   RO         3985    .text               startup_hc32f460.o
-    0x000102ec   0x000102ec   0x0000000c   Code   RO         4085    .text               cmb_fault.o
-    0x000102f8   0x000102f8   0x00000062   Code   RO         4095    .text               mc_w.l(uldiv.o)
-    0x0001035a   0x0001035a   0x00000024   Code   RO         4097    .text               mc_w.l(memcpya.o)
-    0x0001037e   0x0001037e   0x00000024   Code   RO         4099    .text               mc_w.l(memseta.o)
-    0x000103a2   0x000103a2   0x000000de   Code   RO         4366    .text               mf_w.l(ddiv.o)
-    0x00010480   0x00010480   0x0000001a   Code   RO         4368    .text               mf_w.l(dfltui.o)
-    0x0001049a   0x0001049a   0x00000018   Code   RO         4370    .text               mf_w.l(dfltul.o)
-    0x000104b2   0x000104b2   0x00000038   Code   RO         4372    .text               mf_w.l(d2f.o)
-    0x000104ea   0x000104ea   0x0000001e   Code   RO         4390    .text               mc_w.l(llshl.o)
-    0x00010508   0x00010508   0x00000020   Code   RO         4392    .text               mc_w.l(llushr.o)
-    0x00010528   0x00010528   0x00000000   Code   RO         4394    .text               mc_w.l(iusefp.o)
-    0x00010528   0x00010528   0x0000006e   Code   RO         4395    .text               mf_w.l(fepilogue.o)
-    0x00010596   0x00010596   0x000000ba   Code   RO         4397    .text               mf_w.l(depilogue.o)
-    0x00010650   0x00010650   0x00000024   Code   RO         4407    .text               mc_w.l(init.o)
-    0x00010674   0x00010674   0x00000056   Code   RO         4419    .text               mc_w.l(__dczerorl2.o)
-    0x000106ca   0x000106ca   0x0000000e   Code   RO         3943    i.$Sub$$main        system_hc32f460.o
-    0x000106d8   0x000106d8   0x00000088   Code   RO         3647    i.ADV_7280_Send_Buff  i2c.o
+    0x00010000   0x00010000   0x00000280   Data   RO         4097    RESET               startup_hc32f460.o
+    0x00010280   0x00010280   0x00000000   Code   RO         4202  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00010280   0x00010280   0x00000004   Code   RO         4487    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00010284   0x00010284   0x00000004   Code   RO         4490    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00010288   0x00010288   0x00000000   Code   RO         4492    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00010288   0x00010288   0x00000000   Code   RO         4494    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00010288   0x00010288   0x00000008   Code   RO         4495    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00010290   0x00010290   0x00000000   Code   RO         4497    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00010290   0x00010290   0x00000000   Code   RO         4499    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00010290   0x00010290   0x00000004   Code   RO         4488    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00010294   0x00010294   0x00000058   Code   RO         4098    .text               startup_hc32f460.o
+    0x000102ec   0x000102ec   0x0000000c   Code   RO         4198    .text               cmb_fault.o
+    0x000102f8   0x000102f8   0x00000062   Code   RO         4208    .text               mc_w.l(uldiv.o)
+    0x0001035a   0x0001035a   0x00000024   Code   RO         4210    .text               mc_w.l(memcpya.o)
+    0x0001037e   0x0001037e   0x00000024   Code   RO         4212    .text               mc_w.l(memseta.o)
+    0x000103a2   0x000103a2   0x000000de   Code   RO         4479    .text               mf_w.l(ddiv.o)
+    0x00010480   0x00010480   0x0000001a   Code   RO         4481    .text               mf_w.l(dfltui.o)
+    0x0001049a   0x0001049a   0x00000018   Code   RO         4483    .text               mf_w.l(dfltul.o)
+    0x000104b2   0x000104b2   0x00000038   Code   RO         4485    .text               mf_w.l(d2f.o)
+    0x000104ea   0x000104ea   0x0000001e   Code   RO         4503    .text               mc_w.l(llshl.o)
+    0x00010508   0x00010508   0x00000020   Code   RO         4505    .text               mc_w.l(llushr.o)
+    0x00010528   0x00010528   0x00000000   Code   RO         4507    .text               mc_w.l(iusefp.o)
+    0x00010528   0x00010528   0x0000006e   Code   RO         4508    .text               mf_w.l(fepilogue.o)
+    0x00010596   0x00010596   0x000000ba   Code   RO         4510    .text               mf_w.l(depilogue.o)
+    0x00010650   0x00010650   0x00000024   Code   RO         4520    .text               mc_w.l(init.o)
+    0x00010674   0x00010674   0x00000056   Code   RO         4532    .text               mc_w.l(__dczerorl2.o)
+    0x000106ca   0x000106ca   0x0000000e   Code   RO         4056    i.$Sub$$main        system_hc32f460.o
+    0x000106d8   0x000106d8   0x00000088   Code   RO         3755    i.ADV_7280_Send_Buff  i2c.o
     0x00010760   0x00010760   0x000000f4   Code   RO         2964    i.AOS_SetTriggerEventSrc  hc32_ll_aos.o
-    0x00010854   0x00010854   0x00000102   Code   RO         3814    i.ASC               videoprocess.o
-    0x00010956   0x00010956   0x000000c0   Code   RO         3815    i.ASC_Not02         videoprocess.o
+    0x00010854   0x00010854   0x00000102   Code   RO         3922    i.ASC               videoprocess.o
+    0x00010956   0x00010956   0x000000c0   Code   RO         3923    i.ASC_Not02         videoprocess.o
     0x00010a16   0x00010a16   0x00000002   PAD
-    0x00010a18   0x00010a18   0x00000084   Code   RO         3816    i.AV_Connecte_Set   videoprocess.o
+    0x00010a18   0x00010a18   0x00000084   Code   RO         3924    i.AV_Connecte_Set   videoprocess.o
     0x00010a9c   0x00010a9c   0x000000d0   Code   RO         3282    i.BSP_CLK_Init      ev_hc32f460_lqfp100_v2.o
     0x00010b6c   0x00010b6c   0x00000032   Code   RO         3283    i.BSP_LED_Init      ev_hc32f460_lqfp100_v2.o
     0x00010b9e   0x00010b9e   0x00000030   Code   RO         3284    i.BSP_LED_Off       ev_hc32f460_lqfp100_v2.o
@@ -2739,7 +2748,7 @@ Memory Map of the image
     0x000113e4   0x000113e4   0x00000018   Code   RO         3291    i.C_LED_ERR_GREEN   ev_hc32f460_lqfp100_v2.o
     0x000113fc   0x000113fc   0x00000018   Code   RO         3292    i.C_LED_ERR_RED     ev_hc32f460_lqfp100_v2.o
     0x00011414   0x00011414   0x00000018   Code   RO         3293    i.C_LED_OK          ev_hc32f460_lqfp100_v2.o
-    0x0001142c   0x0001142c   0x000000c8   Code   RO         3648    i.Chip_Receive      i2c.o
+    0x0001142c   0x0001142c   0x000000c8   Code   RO         3756    i.Chip_Receive      i2c.o
     0x000114f4   0x000114f4   0x00000218   Code   RO         2044    i.ClockSync_CalculateBrr  hc32_ll_usart.o
     0x0001170c   0x0001170c   0x00000044   Code   RO         2315    i.DDL_AssertHandler  hc32_ll_utility.o
     0x00011750   0x00011750   0x0000004c   Code   RO         2316    i.DDL_ConsoleOutputChar  hc32_ll_utility.o
@@ -2748,7 +2757,7 @@ Memory Map of the image
     0x0001181c   0x0001181c   0x00000204   Code   RO         2993    i.DMA_ChCmd         hc32_ll_dma.o
     0x00011a20   0x00011a20   0x00000080   Code   RO         2995    i.DMA_ClearTransCompleteStatus  hc32_ll_dma.o
     0x00011aa0   0x00011aa0   0x00000070   Code   RO         2996    i.DMA_Cmd           hc32_ll_dma.o
-    0x00011b10   0x00011b10   0x000001cc   Code   RO         3703    i.DMA_Config        uart_dma.o
+    0x00011b10   0x00011b10   0x000001cc   Code   RO         3811    i.DMA_Config        uart_dma.o
     0x00011cdc   0x00011cdc   0x00000084   Code   RO         3011    i.DMA_GetTransCount  hc32_ll_dma.o
     0x00011d60   0x00011d60   0x00000170   Code   RO         3013    i.DMA_Init          hc32_ll_dma.o
     0x00011ed0   0x00011ed0   0x000000e8   Code   RO         3015    i.DMA_LlpInit       hc32_ll_dma.o
@@ -2768,9 +2777,9 @@ Memory Map of the image
     0x00012754   0x00012754   0x000000a0   Code   RO         2432    i.FCG_Fcg0PeriphClockCmd  hc32_ll_fcg.o
     0x000127f4   0x000127f4   0x00000088   Code   RO         2433    i.FCG_Fcg1PeriphClockCmd  hc32_ll_fcg.o
     0x0001287c   0x0001287c   0x00000088   Code   RO         2434    i.FCG_Fcg2PeriphClockCmd  hc32_ll_fcg.o
-    0x00012904   0x00012904   0x00000048   Code   RO         3578    i.FLASH_EraseSector  flash.o
-    0x0001294c   0x0001294c   0x0000005e   Code   RO         3579    i.FLASH_ReadData    flash.o
-    0x000129aa   0x000129aa   0x00000032   Code   RO         3580    i.FLASH_WriteData   flash.o
+    0x00012904   0x00012904   0x00000048   Code   RO         3666    i.FLASH_EraseSector  flash.o
+    0x0001294c   0x0001294c   0x0000005e   Code   RO         3667    i.FLASH_ReadData    flash.o
+    0x000129aa   0x000129aa   0x00000032   Code   RO         3668    i.FLASH_WriteData   flash.o
     0x000129dc   0x000129dc   0x000000bc   Code   RO          614    i.GPIO_AnalogCmd    hc32_ll_gpio.o
     0x00012a98   0x00012a98   0x000001fc   Code   RO          616    i.GPIO_Init         hc32_ll_gpio.o
     0x00012c94   0x00012c94   0x0000008c   Code   RO          619    i.GPIO_ReadInputPins  hc32_ll_gpio.o
@@ -2792,7 +2801,7 @@ Memory Map of the image
     0x00013650   0x00013650   0x00000094   Code   RO         2620    i.I2C_GetStatus     hc32_ll_i2c.o
     0x000136e4   0x000136e4   0x000000f0   Code   RO         2621    i.I2C_Init          hc32_ll_i2c.o
     0x000137d4   0x000137d4   0x00000118   Code   RO         2623    i.I2C_MasterReceiveDataAndStop  hc32_ll_i2c.o
-    0x000138ec   0x000138ec   0x00000074   Code   RO         3650    i.I2C_Master_Transmit  i2c.o
+    0x000138ec   0x000138ec   0x00000074   Code   RO         3758    i.I2C_Master_Transmit  i2c.o
     0x00013960   0x00013960   0x00000068   Code   RO         2624    i.I2C_ReadData      hc32_ll_i2c.o
     0x000139c8   0x000139c8   0x00000088   Code   RO         2626    i.I2C_Restart       hc32_ll_i2c.o
     0x00013a50   0x00013a50   0x00000084   Code   RO         2632    i.I2C_SWResetCmd    hc32_ll_i2c.o
@@ -2936,24 +2945,24 @@ Memory Map of the image
     0x00014a24   0x00014a24   0x00000050   Code   RO         3502    i.Key_Read          main.o
     0x00014a74   0x00014a74   0x00000090   Code   RO            4    i.LL_PERIPH_WE      hc32_ll.o
     0x00014b04   0x00014b04   0x000000a8   Code   RO         2319    i.LL_PrintfInit     hc32_ll_utility.o
-    0x00014bac   0x00014bac   0x00000054   Code   RO         3651    i.Master_Initialize  i2c.o
+    0x00014bac   0x00014bac   0x00000054   Code   RO         3759    i.Master_Initialize  i2c.o
     0x00014c00   0x00014c00   0x00000078   Code   RO         1644    i.PWC_HighSpeedToHighPerformance  hc32_ll_pwc.o
     0x00014c78   0x00014c78   0x00000018   Code   RO            7    i.PWC_REG_Unlock    hc32_ll.o
-    0x00014c90   0x00014c90   0x00000034   Code   RO         3704    i.RX_DMA_TC_IrqCallback  uart_dma.o
-    0x00014cc4   0x00014cc4   0x00000044   Code   RO         3581    i.Read_ASW2         flash.o
-    0x00014d08   0x00014d08   0x00000044   Code   RO         3582    i.Read_AVSW         flash.o
-    0x00014d4c   0x00014d4c   0x0000000c   Code   RO         3818    i.Reser_Status      videoprocess.o
+    0x00014c90   0x00014c90   0x00000034   Code   RO         3812    i.RX_DMA_TC_IrqCallback  uart_dma.o
+    0x00014cc4   0x00014cc4   0x00000044   Code   RO         3669    i.Read_ASW2         flash.o
+    0x00014d08   0x00014d08   0x00000044   Code   RO         3670    i.Read_AVSW         flash.o
+    0x00014d4c   0x00014d4c   0x0000000c   Code   RO         3926    i.Reser_Status      videoprocess.o
     0x00014d58   0x00014d58   0x000000ec   Code   RO         1987    i.SRAM_SetWaitCycle  hc32_ll_sram.o
     0x00014e44   0x00014e44   0x00000330   Code   RO          176    i.SetSysClockDiv    hc32_ll_clk.o
     0x00015174   0x00015174   0x00000108   Code   RO          177    i.SetSysClockSrc    hc32_ll_clk.o
-    0x0001527c   0x0001527c   0x00000048   Code   RO         3819    i.Signal_led        videoprocess.o
+    0x0001527c   0x0001527c   0x00000048   Code   RO         3927    i.Signal_led        videoprocess.o
     0x000152c4   0x000152c4   0x00000284   Code   RO         2045    i.SmartCard_CalculateBrr  hc32_ll_usart.o
-    0x00015548   0x00015548   0x000000cc   Code   RO         3944    i.SystemCoreClockUpdate  system_hc32f460.o
-    0x00015614   0x00015614   0x00000024   Code   RO         3945    i.SystemInit        system_hc32f460.o
+    0x00015548   0x00015548   0x000000cc   Code   RO         4057    i.SystemCoreClockUpdate  system_hc32f460.o
+    0x00015614   0x00015614   0x00000024   Code   RO         4058    i.SystemInit        system_hc32f460.o
     0x00015638   0x00015638   0x000000ec   Code   RO         3294    i.TMR02_A_Config    ev_hc32f460_lqfp100_v2.o
     0x00015724   0x00015724   0x000001ac   Code   RO         3295    i.TMR0_CHA_CompareIrqCallback  ev_hc32f460_lqfp100_v2.o
     0x000158d0   0x000158d0   0x00000080   Code   RO         2474    i.TMR0_ClearStatus  hc32_ll_tmr0.o
-    0x00015950   0x00015950   0x00000088   Code   RO         3705    i.TMR0_Config       uart_dma.o
+    0x00015950   0x00015950   0x00000088   Code   RO         3813    i.TMR0_Config       uart_dma.o
     0x000159d8   0x000159d8   0x000000ac   Code   RO         2480    i.TMR0_HWClearCondCmd  hc32_ll_tmr0.o
     0x00015a84   0x00015a84   0x000000ac   Code   RO         2481    i.TMR0_HWStartCondCmd  hc32_ll_tmr0.o
     0x00015b30   0x00015b30   0x000000ac   Code   RO         2482    i.TMR0_HWStopCondCmd  hc32_ll_tmr0.o
@@ -2963,73 +2972,74 @@ Memory Map of the image
     0x00015e4c   0x00015e4c   0x00000080   Code   RO         2491    i.TMR0_Stop         hc32_ll_tmr0.o
     0x00015ecc   0x00015ecc   0x0000001a   Code   RO         2492    i.TMR0_StructInit   hc32_ll_tmr0.o
     0x00015ee6   0x00015ee6   0x00000002   PAD
-    0x00015ee8   0x00015ee8   0x00000020   Code   RO         3706    i.TX_DMA_TC_IrqCallback  uart_dma.o
+    0x00015ee8   0x00015ee8   0x00000020   Code   RO         3814    i.TX_DMA_TC_IrqCallback  uart_dma.o
     0x00015f08   0x00015f08   0x0000028c   Code   RO         2046    i.UART_CalculateBrr  hc32_ll_usart.o
     0x00016194   0x00016194   0x000000b4   Code   RO         2047    i.USART_ClearStatus  hc32_ll_usart.o
     0x00016248   0x00016248   0x000000c0   Code   RO         2055    i.USART_FuncCmd     hc32_ll_usart.o
     0x00016308   0x00016308   0x0000001c   Code   RO         2056    i.USART_GetBusClockFreq  hc32_ll_usart.o
     0x00016324   0x00016324   0x00000090   Code   RO         2060    i.USART_GetUsartClockFreq  hc32_ll_usart.o
     0x000163b4   0x000163b4   0x00000074   Code   RO         2063    i.USART_ReadData    hc32_ll_usart.o
-    0x00016428   0x00016428   0x00000018   Code   RO         3707    i.USART_RxError_IrqCallback  uart_dma.o
-    0x00016440   0x00016440   0x00000058   Code   RO         3708    i.USART_RxTimeout_IrqCallback  uart_dma.o
+    0x00016428   0x00016428   0x00000018   Code   RO         3815    i.USART_RxError_IrqCallback  uart_dma.o
+    0x00016440   0x00016440   0x00000058   Code   RO         3816    i.USART_RxTimeout_IrqCallback  uart_dma.o
     0x00016498   0x00016498   0x00000118   Code   RO         2064    i.USART_SetBaudrate  hc32_ll_usart.o
     0x000165b0   0x000165b0   0x00000090   Code   RO         2065    i.USART_SetClockDiv  hc32_ll_usart.o
-    0x00016640   0x00016640   0x0000003c   Code   RO         3709    i.USART_TxComplete_IrqCallback  uart_dma.o
+    0x00016640   0x00016640   0x0000003c   Code   RO         3817    i.USART_TxComplete_IrqCallback  uart_dma.o
     0x0001667c   0x0001667c   0x000001f8   Code   RO         2079    i.USART_UART_Init   hc32_ll_usart.o
     0x00016874   0x00016874   0x0000002e   Code   RO         2081    i.USART_UART_StructInit  hc32_ll_usart.o
     0x000168a2   0x000168a2   0x00000002   PAD
-    0x000168a4   0x000168a4   0x000001b0   Code   RO         3583    i.Video_ReadNot2    flash.o
-    0x00016a54   0x00016a54   0x0000000e   Code   RO         3821    i.Video_Sw          videoprocess.o
+    0x000168a4   0x000168a4   0x000001b0   Code   RO         3671    i.Video_ReadNot2    flash.o
+    0x00016a54   0x00016a54   0x0000000e   Code   RO         3929    i.Video_Sw          videoprocess.o
     0x00016a62   0x00016a62   0x00000002   PAD
-    0x00016a64   0x00016a64   0x00000020   Code   RO         4312    i.__0printf$8       mc_w.l(printf8.o)
-    0x00016a84   0x00016a84   0x00000028   Code   RO         4314    i.__0sprintf$8      mc_w.l(printf8.o)
-    0x00016aac   0x00016aac   0x0000001c   Code   RO         3710    i.__NVIC_ClearPendingIRQ  uart_dma.o
-    0x00016ac8   0x00016ac8   0x00000022   Code   RO         3711    i.__NVIC_EnableIRQ  uart_dma.o
+    0x00016a64   0x00016a64   0x00000020   Code   RO         4425    i.__0printf$8       mc_w.l(printf8.o)
+    0x00016a84   0x00016a84   0x00000028   Code   RO         4427    i.__0sprintf$8      mc_w.l(printf8.o)
+    0x00016aac   0x00016aac   0x0000001c   Code   RO         3818    i.__NVIC_ClearPendingIRQ  uart_dma.o
+    0x00016ac8   0x00016ac8   0x00000022   Code   RO         3819    i.__NVIC_EnableIRQ  uart_dma.o
     0x00016aea   0x00016aea   0x00000002   PAD
-    0x00016aec   0x00016aec   0x00000028   Code   RO         3712    i.__NVIC_SetPriority  uart_dma.o
-    0x00016b14   0x00016b14   0x0000000e   Code   RO         4413    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00016b22   0x00016b22   0x00000002   Code   RO         4414    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00016b24   0x00016b24   0x0000000e   Code   RO         4415    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00016aec   0x00016aec   0x00000028   Code   RO         3820    i.__NVIC_SetPriority  uart_dma.o
+    0x00016b14   0x00016b14   0x0000000e   Code   RO         4526    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00016b22   0x00016b22   0x00000002   Code   RO         4527    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00016b24   0x00016b24   0x0000000e   Code   RO         4528    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x00016b32   0x00016b32   0x00000002   PAD
-    0x00016b34   0x00016b34   0x00000410   Code   RO         4319    i._printf_core      mc_w.l(printf8.o)
-    0x00016f44   0x00016f44   0x00000024   Code   RO         4320    i._printf_post_padding  mc_w.l(printf8.o)
-    0x00016f68   0x00016f68   0x0000002e   Code   RO         4321    i._printf_pre_padding  mc_w.l(printf8.o)
-    0x00016f96   0x00016f96   0x0000000a   Code   RO         4323    i._sputc            mc_w.l(printf8.o)
-    0x00016fa0   0x00016fa0   0x000000ec   Code   RO         3991    i.cm_backtrace_call_stack  cm_backtrace.o
-    0x0001708c   0x0001708c   0x0000028c   Code   RO         3993    i.cm_backtrace_fault  cm_backtrace.o
-    0x00017318   0x00017318   0x0000002c   Code   RO         3994    i.cm_backtrace_firmware_info  cm_backtrace.o
-    0x00017344   0x00017344   0x00000130   Code   RO         3822    i.detect_loop       videoprocess.o
-    0x00017474   0x00017474   0x00000154   Code   RO         3823    i.detect_video_format  videoprocess.o
-    0x000175c8   0x000175c8   0x00000030   Code   RO         3996    i.disassembly_ins_is_bl_blx  cm_backtrace.o
-    0x000175f8   0x000175f8   0x000000dc   Code   RO         3997    i.dump_stack        cm_backtrace.o
-    0x000176d4   0x000176d4   0x00000308   Code   RO         3998    i.fault_diagnosis   cm_backtrace.o
-    0x000179dc   0x000179dc   0x00000018   Code   RO         2326    i.fputc             hc32_ll_utility.o
-    0x000179f4   0x000179f4   0x00000334   Code   RO         3713    i.get_mode          uart_dma.o
-    0x00017d28   0x00017d28   0x00000068   Code   RO         3652    i.i2c_init          i2c.o
-    0x00017d90   0x00017d90   0x00000128   Code   RO         3504    i.main              main.o
-    0x00017eb8   0x00017eb8   0x00000138   Code   RO         3584    i.mem_settings      flash.o
-    0x00017ff0   0x00017ff0   0x00000098   Code   RO         3999    i.print_call_stack  cm_backtrace.o
-    0x00018088   0x00018088   0x00000048   Code   RO         3824    i.set_ace           videoprocess.o
-    0x000180d0   0x000180d0   0x00000090   Code   RO         3825    i.set_bcsh          videoprocess.o
-    0x00018160   0x00018160   0x00000048   Code   RO         3826    i.set_double_line   videoprocess.o
-    0x000181a8   0x000181a8   0x00000050   Code   RO         3827    i.set_input         videoprocess.o
-    0x000181f8   0x000181f8   0x00000050   Code   RO         3828    i.set_smooth        videoprocess.o
-    0x00018248   0x00018248   0x00000720   Code   RO         3714    i.signal_turn       uart_dma.o
-    0x00018968   0x00018968   0x00000024   Code   RO         4000    i.statck_del_fpu_regs  cm_backtrace.o
-    0x0001898c   0x0001898c   0x00000114   Code   RO         3715    i.uart_dma_init     uart_dma.o
-    0x00018aa0   0x00018aa0   0x0000012c   Code   RO         3506    i.vd_Button_Init    main.o
-    0x00018bcc   0x00018bcc   0x00000038   Code   RO         3829    i.video_Deinit      videoprocess.o
-    0x00018c04   0x00018c04   0x00000120   Code   RO         3830    i.video_init        videoprocess.o
-    0x00018d24   0x00018d24   0x00000010   Data   RO         2087    .constdata          hc32_ll_usart.o
-    0x00018d34   0x00018d34   0x0000000f   Data   RO         3832    .constdata          videoprocess.o
-    0x00018d43   0x00018d43   0x00000001   PAD
-    0x00018d44   0x00018d44   0x000000e0   Data   RO         4002    .constdata          cm_backtrace.o
-    0x00018e24   0x00018e24   0x00000666   Data   RO         4003    .conststring        cm_backtrace.o
-    0x0001948a   0x0001948a   0x00000002   PAD
-    0x0001948c   0x0001948c   0x00000020   Data   RO         4411    Region$$Table       anon$$obj.o
+    0x00016b34   0x00016b34   0x00000410   Code   RO         4432    i._printf_core      mc_w.l(printf8.o)
+    0x00016f44   0x00016f44   0x00000024   Code   RO         4433    i._printf_post_padding  mc_w.l(printf8.o)
+    0x00016f68   0x00016f68   0x0000002e   Code   RO         4434    i._printf_pre_padding  mc_w.l(printf8.o)
+    0x00016f96   0x00016f96   0x0000000a   Code   RO         4436    i._sputc            mc_w.l(printf8.o)
+    0x00016fa0   0x00016fa0   0x000000ec   Code   RO         4104    i.cm_backtrace_call_stack  cm_backtrace.o
+    0x0001708c   0x0001708c   0x0000028c   Code   RO         4106    i.cm_backtrace_fault  cm_backtrace.o
+    0x00017318   0x00017318   0x0000002c   Code   RO         4107    i.cm_backtrace_firmware_info  cm_backtrace.o
+    0x00017344   0x00017344   0x000000a4   Code   RO         3930    i.configure_video_encoder  videoprocess.o
+    0x000173e8   0x000173e8   0x00000130   Code   RO         3931    i.detect_loop       videoprocess.o
+    0x00017518   0x00017518   0x00000154   Code   RO         3932    i.detect_video_format  videoprocess.o
+    0x0001766c   0x0001766c   0x00000030   Code   RO         4109    i.disassembly_ins_is_bl_blx  cm_backtrace.o
+    0x0001769c   0x0001769c   0x000000dc   Code   RO         4110    i.dump_stack        cm_backtrace.o
+    0x00017778   0x00017778   0x00000308   Code   RO         4111    i.fault_diagnosis   cm_backtrace.o
+    0x00017a80   0x00017a80   0x00000018   Code   RO         2326    i.fputc             hc32_ll_utility.o
+    0x00017a98   0x00017a98   0x00000334   Code   RO         3821    i.get_mode          uart_dma.o
+    0x00017dcc   0x00017dcc   0x00000068   Code   RO         3760    i.i2c_init          i2c.o
+    0x00017e34   0x00017e34   0x00000130   Code   RO         3504    i.main              main.o
+    0x00017f64   0x00017f64   0x00000138   Code   RO         3672    i.mem_settings      flash.o
+    0x0001809c   0x0001809c   0x00000098   Code   RO         4112    i.print_call_stack  cm_backtrace.o
+    0x00018134   0x00018134   0x00000048   Code   RO         3933    i.set_ace           videoprocess.o
+    0x0001817c   0x0001817c   0x00000090   Code   RO         3934    i.set_bcsh          videoprocess.o
+    0x0001820c   0x0001820c   0x00000048   Code   RO         3935    i.set_double_line   videoprocess.o
+    0x00018254   0x00018254   0x00000050   Code   RO         3936    i.set_input         videoprocess.o
+    0x000182a4   0x000182a4   0x00000050   Code   RO         3937    i.set_smooth        videoprocess.o
+    0x000182f4   0x000182f4   0x00000720   Code   RO         3822    i.signal_turn       uart_dma.o
+    0x00018a14   0x00018a14   0x00000024   Code   RO         4113    i.statck_del_fpu_regs  cm_backtrace.o
+    0x00018a38   0x00018a38   0x00000114   Code   RO         3823    i.uart_dma_init     uart_dma.o
+    0x00018b4c   0x00018b4c   0x0000012c   Code   RO         3506    i.vd_Button_Init    main.o
+    0x00018c78   0x00018c78   0x00000038   Code   RO         3938    i.video_Deinit      videoprocess.o
+    0x00018cb0   0x00018cb0   0x00000124   Code   RO         3939    i.video_init        videoprocess.o
+    0x00018dd4   0x00018dd4   0x00000010   Data   RO         2087    .constdata          hc32_ll_usart.o
+    0x00018de4   0x00018de4   0x00000006   Data   RO         3941    .constdata          videoprocess.o
+    0x00018dea   0x00018dea   0x00000002   PAD
+    0x00018dec   0x00018dec   0x000000e0   Data   RO         4115    .constdata          cm_backtrace.o
+    0x00018ecc   0x00018ecc   0x00000666   Data   RO         4116    .conststring        cm_backtrace.o
+    0x00019532   0x00019532   0x00000002   PAD
+    0x00019534   0x00019534   0x00000020   Data   RO         4524    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x1fff8000, Load base: 0x000194ac, Size: 0x00001468, Max: 0x0002f000, ABSOLUTE, COMPRESSED[0x000000d4])
+    Execution Region RW_IRAM1 (Exec base: 0x1fff8000, Load base: 0x00019554, Size: 0x00001460, Max: 0x0002f000, ABSOLUTE, COMPRESSED[0x000000d8])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3038,19 +3048,18 @@ Memory Map of the image
     0x1fff8011   COMPRESSED   0x00000003   PAD
     0x1fff8014   COMPRESSED   0x0000001c   Data   RW         3296    .data               ev_hc32f460_lqfp100_v2.o
     0x1fff8030   COMPRESSED   0x0000000c   Data   RW         3508    .data               main.o
-    0x1fff803c   COMPRESSED   0x00000004   Data   RW         3718    .data               uart_dma.o
-    0x1fff8040   COMPRESSED   0x00000121   Data   RW         3833    .data               videoprocess.o
-    0x1fff8161   COMPRESSED   0x00000003   PAD
-    0x1fff8164   COMPRESSED   0x00000008   Data   RW         3946    .data               system_hc32f460.o
-    0x1fff816c   COMPRESSED   0x00000015   Data   RW         4004    .data               cm_backtrace.o
-    0x1fff8181   COMPRESSED   0x00000003   PAD
-    0x1fff8184   COMPRESSED   0x00000004   Data   RW         4094    .data               mc_w.l(stdout.o)
-    0x1fff8188        -       0x00000200   Zero   RW          895    .bss                hc32_ll_interrupts.o
-    0x1fff8388        -       0x00000100   Zero   RW         3585    .bss                flash.o
-    0x1fff8488        -       0x00000214   Zero   RW         3717    .bss                uart_dma.o
-    0x1fff869c        -       0x000001c8   Zero   RW         4001    .bss                cm_backtrace.o
-    0x1fff8864   COMPRESSED   0x00000004   PAD
-    0x1fff8868        -       0x00000c00   Zero   RW         3982    STACK               startup_hc32f460.o
+    0x1fff803c   COMPRESSED   0x00000004   Data   RW         3826    .data               uart_dma.o
+    0x1fff8040   COMPRESSED   0x0000011e   Data   RW         3942    .data               videoprocess.o
+    0x1fff815e   COMPRESSED   0x00000002   PAD
+    0x1fff8160   COMPRESSED   0x00000008   Data   RW         4059    .data               system_hc32f460.o
+    0x1fff8168   COMPRESSED   0x00000015   Data   RW         4117    .data               cm_backtrace.o
+    0x1fff817d   COMPRESSED   0x00000003   PAD
+    0x1fff8180   COMPRESSED   0x00000004   Data   RW         4207    .data               mc_w.l(stdout.o)
+    0x1fff8184        -       0x00000200   Zero   RW          895    .bss                hc32_ll_interrupts.o
+    0x1fff8384        -       0x00000100   Zero   RW         3673    .bss                flash.o
+    0x1fff8484        -       0x00000214   Zero   RW         3825    .bss                uart_dma.o
+    0x1fff8698        -       0x000001c8   Zero   RW         4114    .bss                cm_backtrace.o
+    0x1fff8860        -       0x00000c00   Zero   RW         4095    STACK               startup_hc32f460.o
 
 
 ==============================================================================
@@ -3063,7 +3072,7 @@ Image component sizes
       2164        400       1862         21        456      14526   cm_backtrace.o
         12          0          0          0          0        488   cmb_fault.o
       1400        106          0         28          0     342604   ev_hc32f460_lqfp100_v2.o
-      1096        226          0          0        256       5944   flash.o
+      1096        226          0          0        256       7836   flash.o
        168         32          0          0          0     321115   hc32_ll.o
        244         52          0          0          0        821   hc32_ll_aos.o
       2788        444          0          0          0      18506   hc32_ll_clk.o
@@ -3079,16 +3088,16 @@ Image component sizes
       3466        714         16          0          0      13675   hc32_ll_usart.o
        464        150          0         16          0       5664   hc32_ll_utility.o
        640         66          0          0          0       4097   i2c.o
-       720         66          0         12          0       6232   main.o
+       728         66          0         12          0     286912   main.o
         88         20        640          0       3072        864   startup_hc32f460.o
        254         42          0          8          0       2434   system_hc32f460.o
       3874        606          0          4        532      42000   uart_dma.o
-      2116        530         15        289          0      12895   videoprocess.o
+      2284        592          6        286          0      13769   videoprocess.o
 
     ----------------------------------------------------------------------
-     33258       7464       2568        388       4832     942765   Object Totals
+     33434       7526       2560        384       4828    1226211   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        16          0          3          9          4          0   (incl. Padding)
+        16          0          4          8          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -3141,15 +3150,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     35492       7540       2568        392       4832     914877   Grand Totals
-     35492       7540       2568        212       4832     914877   ELF Image Totals (compressed)
-     35492       7540       2568        212          0          0   ROM Totals
+     35668       7602       2560        388       4828    1198223   Grand Totals
+     35668       7602       2560        216       4828    1198223   ELF Image Totals (compressed)
+     35668       7602       2560        216          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                38060 (  37.17kB)
-    Total RW  Size (RW Data + ZI Data)              5224 (   5.10kB)
-    Total ROM Size (Code + RO Data + RW Data)      38272 (  37.38kB)
+    Total RO  Size (Code + RO Data)                38228 (  37.33kB)
+    Total RW  Size (RW Data + ZI Data)              5216 (   5.09kB)
+    Total ROM Size (Code + RO Data + RW Data)      38444 (  37.54kB)
 
 ==============================================================================
 
